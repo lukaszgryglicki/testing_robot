@@ -3,28 +3,49 @@
 # did you know you can embed json in yaml?
 # try uncommenting the next line
 # { foo: 'bar' }
+# 1
+#
 
 json:
-  - rigid
-  - better for data interchange
+# comment 1
+- rigid
+- better for data interchange
+- false
 yaml:
-  - slim and flexible
-  - better for configuration
+# comment 2
+- slim and flexible
+- better for configuration
+- true
 object:
+# comment 3
   key: value
   array:
-    - null_value:
-    - boolean: true
-    - boolean: false
-    - integer: 1
-    - float: 1.23
-  155: question?
-paragraph: >
-   Blank lines denote
-
-   paragraph breaks
+  - null_value: 
+  - boolean: true
+  # comment in array
+  - integer: 1
+  flo: 1.234
+  bigN: 643287462387423
+  aDateTime: '2017-07-16T22:35:12Z'
+  # comment 4
+  aDate: '2017-07-16'
+  aTime: '22:35:12' # comment 5
+  badFlo: 1e10
+  oneMoreStruct:
+    # comment 101
+    field1: xyz #comment 102 {{
+    field3: 'xyz' #comment 105 : -
+    # comment 103
+# comment 104
+    field2: 11
+paragraph: |
+  # comment 6
+  Blank lines denote
+  # comment 7
+  paragraph breaks # comment 8
 content: |-
-   Or we
-   can auto
-   convert line breaks
-   to save space
+  Or we
+  can auto
+  convert line breaks
+  to save space # comment 9
+# comment 10
